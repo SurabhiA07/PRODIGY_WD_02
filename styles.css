@@ -1,0 +1,92 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.stopwatch-container {
+  max-width: 400px;
+  margin: 50px auto;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  position: relative;
+  border: 2px solid #000;
+}
+
+.display {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.controls button {
+  margin: 5px;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background-color: #9f7ccd;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  outline: none;
+  border: 2px solid #000;
+}
+
+.controls button:hover {
+  background-color: #e383c8;
+}
+
+#lapTimes {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+}
+
+#lapTimes li {
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+#lapTimes li:hover {
+  background-color: #eaeaea;
+}
+
+@keyframes scaleIn {
+  0% {
+      transform: scale(0.5);
+      opacity: 0;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+      transform: translateX(100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+.display {
+  animation: scaleIn 0.5s forwards;
+}
+
+.controls button {
+  animation: slideInFromRight 0.5s forwards;
+}
